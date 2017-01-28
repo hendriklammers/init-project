@@ -4,7 +4,8 @@
   "description": "Project description",
   "main": "src/index.js",
   "scripts": {
-    "build": "npm install && npm run lint && webpack",
+    "build": "yarn && npm run lint && webpack",
+    "yarn": "yarn add -D webpack@2 webpack-dev-server@2 eslint babel-core babel-loader babel-polyfill babel-preset-es2015",
     "lint": "eslint src --ext .js",
     "start": "npm run watch",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -16,14 +17,5 @@
     ]
   },
   "author": "Hendrik Lammers (www.hendriklammers.com)",
-  "license": "MIT",
-  "devDependencies": {
-    "babel-core": "^6.9.1",
-    "babel-loader": "^6.2.4",
-    "babel-polyfill": "^6.9.1",
-    "babel-preset-es2015-webpack": "^6.4.1",
-    "eslint": "^2.11.1",
-    "webpack": "^2.1.0-beta.15",
-    "webpack-dev-server": "^2.1.0-beta"
-  }
+  "license": "MIT"
 }

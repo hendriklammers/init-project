@@ -5,16 +5,11 @@
   "main": "src/index.js",
   "scripts": {
     "build": "yarn && npm run lint && webpack",
-    "yarn": "yarn add -D webpack@2 webpack-dev-server@2 eslint babel-core babel-loader babel-polyfill babel-preset-es2015",
+    "yarn": "yarn add -D webpack@2 webpack-dev-server@2 eslint babel-core babel-loader babel-polyfill babel-preset-es2015 babel-preset-stage-0",
     "lint": "eslint src --ext .js",
     "start": "npm run watch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "webpack-dev-server --port 8000 --inline"
-  },
-  "babel": {
-    "presets": [
-      "es2015-webpack"
-    ]
+    "watch": "webpack-dev-server"
   },
   "author": "Hendrik Lammers (www.hendriklammers.com)",
   "license": "MIT"

@@ -6,4 +6,5 @@
   "libs": [
     "browser"
   ]
+  "loadEagerly": []
 }

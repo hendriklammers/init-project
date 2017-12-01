@@ -4,7 +4,6 @@ module.exports = {
   context: path.resolve(__dirname, 'src'),
   devtool: 'source-map',
   entry: [
-    'babel-polyfill',
     path.resolve(__dirname, 'src/index.js')
   ],
   output: {
@@ -23,8 +22,13 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: [
-              ['es2015', {modules: false}],
-              'stage-0'
+              ['@babel/preset-env', {
+                targets: {
+                  browsers: ['last 2 versions']
+                },
+                useBuiltIns: 'usage'
+              }],
+              '@babel/stage-0'
             ]
           }
         }]

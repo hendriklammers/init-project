@@ -39,9 +39,6 @@ module.exports = {
       },
     ]
   },
-  performance: {
-    hints: false
-  },
   devServer: {
     contentBase: __dirname + '/public',
     inline: true,

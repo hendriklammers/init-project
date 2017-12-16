@@ -4,13 +4,16 @@
   "description": "PROJECT_DESCRIPTION",
   "main": "src/index.js",
   "scripts": {
-    "build": "yarn run lint && webpack",
+    "build": "yarn run lint && webpack -p",
     "clean": "rm -rf public/dist",
     "lint": "eslint src --ext .js",
     "start": "yarn run watch",
-    "watch": "webpack-dev-server",
+    "watch": "webpack-dev-server --hot",
     "deploy": "yarn run clean && mkdir -p public/dist && yarn run build"
   },
   "author": "Hendrik Lammers (www.hendriklammers.com)",
-  "license": "MIT"
+  "license": "MIT",
+  "browserslist": [
+    "last 2 versions"
+  ]
 }
